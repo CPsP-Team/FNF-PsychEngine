@@ -448,7 +448,7 @@ class Paths
 
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '')
-		return Sys.getCwd() + 'mods/' + key;
+		return #if mobile MobileUtil.getDirectory() #else Sys.getCwd() #end + 'mods/' + key;
 
 	inline static public function modsJson(key:String)
 		return modFolders('data/' + key + '.json');
@@ -486,7 +486,7 @@ class Paths
 			if(FileSystem.exists(fileToCheck))
 				return fileToCheck;
 		}
-		return Sys.getCwd() + 'mods/' + key;
+		return #if mobile MobileUtil.getDirectory() #else Sys.getCwd() #end + 'mods/' + key;
 	}
 	#end
 
