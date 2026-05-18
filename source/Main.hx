@@ -1,9 +1,5 @@
 package;
 
-#if android
-import android.content.Context;
-#end
-
 import debug.FPSCounter;
 
 import flixel.graphics.FlxGraphic;
@@ -75,14 +71,15 @@ class Main extends Sprite
 		backend.Native.fixScaling();
 		#end
 
-		// Credits to MAJigsaw77 (he's the og author for this code)
+		#if mobile
 		#if android
-		Sys.setCwd(Path.addTrailingSlash(MobileUtil.getDirectory()));
 		MobileUtil.getPermissions();
-		#elseif ios
-		Sys.setCwd(lime.system.System.applicationStorageDirectory);
+		MobileUtil.initDirectory();
 		#end
-		#if VIDEOS_ALLOWED
+		Sys.setCwd(MobileUtil.getAssetDirectory());
+		MobileUtil.copyAssets();
+    #end
+
 		hxvlc.util.Handle.init(#if (hxvlc >= "1.8.0")  ['--no-lua'] #end);
 		#end
 
