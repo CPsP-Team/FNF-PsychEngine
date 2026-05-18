@@ -2,17 +2,13 @@
   "dependencies": [
     {
       "name": "lime",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/th2l-devs/lime"
+      "type": "haxelib",
+      "version": "8.1.2"
     },
     {
       "name": "openfl",
-      "type": "git",
-      "dir": null,
-      "ref": "develop",
-      "url": "https://github.com/th2l-devs/openfl"
+      "type": "haxelib",
+      "version": "9.3.3"
     },
     {
       "name": "flixel",
@@ -60,6 +56,13 @@
       "name": "tjson",
       "type": "haxelib",
       "version": "1.4.0"
+    },
+    {
+    "name": "extension-androidtools",
+    "type": "git",
+    "dir": null,
+    "ref": "main",
+    "url": "https://github.com/MAJigsaw77/extension-androidtools"
     },
     {
       "name": "hxdiscord_rpc",
