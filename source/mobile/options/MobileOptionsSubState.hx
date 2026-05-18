@@ -24,7 +24,6 @@ class MobileOptionsSubState extends BaseOptionsMenu {
 		option = new Option('Storage Type',
 			'Which folder Psych Engine should use?',
 			'storageType',
-			'EXTERNAL_DATA',
 			STRING,
 			storageTypes
 		);
