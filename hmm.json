@@ -2,8 +2,10 @@
   "dependencies": [
     {
       "name": "lime",
-      "type": "haxelib",
-      "version": "8.1.2"
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/ArkoseLabsOfficial/lime"
     },
     {
       "name": "openfl",
@@ -56,13 +58,6 @@
       "name": "tjson",
       "type": "haxelib",
       "version": "1.4.0"
-    },
-    {
-    "name": "extension-androidtools",
-    "type": "git",
-    "dir": null,
-    "ref": "main",
-    "url": "https://github.com/LimeExtensions/extension-androidtools"
     },
     {
       "name": "hxdiscord_rpc",
