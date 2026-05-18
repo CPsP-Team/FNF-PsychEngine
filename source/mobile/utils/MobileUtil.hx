@@ -1,4 +1,4 @@
-package mobile.backend.utils;
+package mobile.utils;
 
 import lime.system.System as LimeSystem;
 import haxe.io.Path;
