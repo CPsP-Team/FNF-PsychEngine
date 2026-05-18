@@ -86,17 +86,13 @@ class MobileUtil
 		 **/
 		switch(curStorageType) {
 			case 'EXTERNAL':
-				daPath = "/sdcard/.CodenameEngine";
-			/* obb doesnt work and I dont wanna fix it -ArkoseLabs
-			case 'EXTERNAL_OBB':
-				daPath = "/sdcard/Android/obb/com.yoshman29.codenameengine";
-			*/
+				daPath = "/sdcard/.PsychEngine";
 			case 'EXTERNAL_MEDIA':
-				daPath = "/sdcard/Android/media/com.yoshman29.codenameengine";
+				daPath = "/sdcard/Android/media/com.shadowmario.psychengine";
 			case 'EXTERNAL_DATA':
-				daPath = "/sdcard/Android/data/com.yoshman29.codenameengine/files";
+				daPath = "/sdcard/Android/data/com.shadowmario.psychengine/files";
 			default: //technically not needed but here for safety -ArkoseLabs
-				if (daPath == null || daPath == '') daPath = "/sdcard/Android/data/com.yoshman29.codenameengine/files";
+				if (daPath == null || daPath == '') daPath = "/sdcard/Android/data/com.shadowmario.psychengine/files";
 		}
 		daPath = Path.addTrailingSlash(daPath);
 		currentDirectory = daPath;
