@@ -1,0 +1,48 @@
+package mobile.options;
+
+import flixel.input.keyboard.FlxKey;
+import options.BaseOptionsMenu;
+import options.Option;
+
+class MobileOptionsSubState extends BaseOptionsMenu {
+	#if android
+	var storageTypes:Array<String> = ["EXTERNAL_DATA", "EXTERNAL_OBB", "EXTERNAL_MEDIA", "EXTERNAL"];
+	var customPaths:Array<String> = MobileUtil.getCustomStorageDirectories(false);
+	final lastStorageType:String = ClientPrefs.storageType;
+	#end
+
+	var option:Option;
+	var HitboxTypes:Array<String>;
+	public function new() {
+		title = 'Mobile Options';
+		rpcTitle = 'Mobile Options Menu'; // for Discord Rich Presence, fuck it
+		#if android
+		storageTypes = storageTypes.concat(customPaths); //Get Custom Paths From File
+		#end
+
+		#if android
+		option = new Option('Storage Type',
+			'Which folder Psych Engine should use?',
+			'storageType',
+			'string',
+			'EXTERNAL_DATA',
+			storageTypes
+		);
+		addOption(option);
+		#end
+
+		super();
+	}
+
+	override public function destroy() {
+		super.destroy();
+
+		#if android
+		if (ClientPrefs.storageType != lastStorageType) {
+			File.saveContent(lime.system.System.applicationStorageDirectory + 'storagetype.txt', ClientPrefs.storageType);
+			ClientPrefs.saveSettings();
+			MobileUtil.initDirectory();
+		}
+		#end
+	}
+}
