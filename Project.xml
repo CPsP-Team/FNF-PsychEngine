@@ -199,6 +199,9 @@
 		  <config:android permission="android.permission.CAPTURE_AUDIO_OUTPUT" />
 	  </section>
 
+    <haxedef name="lime_use_old_deltatime" />
+	<haxedef name="lime_disable_motion_sensors" />
+		
 	<!-- _________________________________ Custom _______________________________ -->
 
 	<assets path='art/icons/iconOG.png' rename='icon.png' if="linux || mac" />
