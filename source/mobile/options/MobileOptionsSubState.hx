@@ -8,7 +8,7 @@ class MobileOptionsSubState extends BaseOptionsMenu {
 	#if android
 	var storageTypes:Array<String> = ["EXTERNAL_DATA", "EXTERNAL_MEDIA", "EXTERNAL"];
 	var customPaths:Array<String> = MobileUtil.getCustomStorageDirectories(false);
-	final lastStorageType:String = ClientPrefs.storageType;
+	final lastStorageType:String = ClientPrefs.data.storageType;
 	#end
 
 	var option:Option;
