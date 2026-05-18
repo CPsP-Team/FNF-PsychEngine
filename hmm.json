@@ -11,8 +11,8 @@
       "name": "openfl",
       "type": "git",
       "dir": null,
-      "ref": "develop",
-      "url": "https://github.com/th2l-devs/openfl"
+      "ref": "old",
+      "url": "https://github.com/CodenameCrew/cne-openfl"
     },
     {
       "name": "flixel",
