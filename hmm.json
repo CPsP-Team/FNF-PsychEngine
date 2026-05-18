@@ -5,14 +5,14 @@
       "type": "git",
       "dir": null,
       "ref": "main",
-      "url": "https://github.com/ArkoseLabsOfficial/lime"
+      "url": "https://github.com/th2l-devs/lime"
     },
     {
       "name": "openfl",
       "type": "git",
       "dir": null,
-      "ref": "old",
-      "url": "https://github.com/CodenameCrew/cne-openfl"
+      "ref": "develop",
+      "url": "https://github.com/th2l-devs/openfl"
     },
     {
       "name": "flixel",
