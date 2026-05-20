@@ -104,7 +104,7 @@ class MobileUtil
 		}
 		catch (e:Dynamic)
 		{
-			Application.current.window.alert("Looks like you doesn't have directory named\n" + MobileUtil.getAssetDirectory() +
+			Application.current.window.alert("Looks like you don't have directory named\n" + MobileUtil.getAssetDirectory() +
 			"\nBut maybe this couldn't be right, android loves to give errors like this\nPress OK & let's see what happens\nCurrent Error You Got:\n" + e, "Warning!");
 			//lime.system.System.exit(1);
 		}
