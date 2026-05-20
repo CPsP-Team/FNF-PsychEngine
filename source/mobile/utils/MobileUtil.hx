@@ -26,7 +26,7 @@ class MobileUtil
 {
 	#if sys
 	public static inline function getAssetDirectory():String
-		return #if android haxe.io.Path.addTrailingSlash("/sdcard/Android/data/com.shadowmario.psychengine/files") #elseif ios lime.system.System.documentsDirectory #else Sys.getCwd() #end;
+		return #if android haxe.io.Path.addTrailingSlash("/sdcard/Android/data/com.shadowmario.psychengine2/files") #elseif ios lime.system.System.documentsDirectory #else Sys.getCwd() #end;
 
 	#if android
 	public static inline function getCustomStoragePath():String
@@ -86,13 +86,13 @@ class MobileUtil
 		 **/
 		switch(curStorageType) {
 			case 'EXTERNAL':
-				daPath = "/sdcard/.PsychEngine";
+				daPath = "/sdcard/.PsychEngine2";
 			case 'EXTERNAL_MEDIA':
-				daPath = "/sdcard/Android/media/com.shadowmario.psychengine";
+				daPath = "/sdcard/Android/media/com.shadowmario.psychengine2";
 			case 'EXTERNAL_DATA':
-				daPath = "/sdcard/Android/data/com.shadowmario.psychengine/files";
+				daPath = "/sdcard/Android/data/com.shadowmario.psychengine2/files";
 			default: //technically not needed but here for safety -ArkoseLabs
-				if (daPath == null || daPath == '') daPath = "/sdcard/Android/data/com.shadowmario.psychengine/files";
+				if (daPath == null || daPath == '') daPath = "/sdcard/Android/data/com.shadowmario.psychengine2/files";
 		}
 		daPath = Path.addTrailingSlash(daPath);
 		currentDirectory = daPath;
