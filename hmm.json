@@ -67,13 +67,6 @@
 	   "url": "https://github.com/MAJigsaw77/extension-androidtools"
     },
     {
-      "name": "hxdiscord_rpc",
-      "type": "git",
-      "dir": null,
-      "ref": "main",
-      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
-    },
-    {
       "name": "flxanimate",
       "type": "git",
       "dir": null,
@@ -98,8 +91,8 @@
       "name": "linc_luajit",
       "type": "git",
       "dir": null,
-      "ref": "master",
-      "url": "https://github.com/superpowers04/linc_luajit"
+      "ref": "main",
+      "url": "https://github.com/th2l-devs/linc_luajit"
     }
   ]
 }
